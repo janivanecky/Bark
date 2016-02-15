@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BA27867E-257A-4CEC-87E4-727EE89EDB63}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Bark</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Bark.cpp" />
+    <ClCompile Include="Core\Math.cpp" />
+    <ClCompile Include="Core\String.cpp" />
+    <ClCompile Include="DDSLoader.cpp" />
+    <ClCompile Include="DXTK\BinaryReader.cpp" />
+    <ClCompile Include="DXTK\CommonStates.cpp" />
+    <ClCompile Include="DXTK\DDSTextureLoader.cpp" />
+    <ClCompile Include="DXTK\EffectCommon.cpp" />
+    <ClCompile Include="DXTK\GamePad.cpp" />
+    <ClCompile Include="DXTK\Keyboard.cpp" />
+    <ClCompile Include="DXTK\Model.cpp" />
+    <ClCompile Include="DXTK\ModelLoadSDKMESH.cpp" />
+    <ClCompile Include="DXTK\Mouse.cpp" />
+    <ClCompile Include="DXTK\pch.cpp" />
+    <ClCompile Include="DXTK\PrimitiveBatch.cpp" />
+    <ClCompile Include="DXTK\ScreenGrab.cpp" />
+    <ClCompile Include="DXTK\SimpleMath.cpp" />
+    <ClCompile Include="DXTK\VertexTypes.cpp" />
+    <ClCompile Include="DXTK\WICTextureLoader.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Graphics2D.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OBJLoader.cpp" />
+    <ClCompile Include="PerlinNoise.cpp" />
+    <ClCompile Include="PlatformFunctions.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="UtilMesh.cpp" />
+    <ClCompile Include="win32main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bark.h" />
+    <ClInclude Include="Core\Def.h" />
+    <ClInclude Include="Core\Math.h" />
+    <ClInclude Include="Core\String.h" />
+    <ClInclude Include="DDSLoader.h" />
+    <ClInclude Include="DXTK\AlignedNew.h" />
+    <ClInclude Include="DXTK\Audio.h" />
+    <ClInclude Include="DXTK\Bezier.h" />
+    <ClInclude Include="DXTK\BinaryReader.h" />
+    <ClInclude Include="DXTK\CommonStates.h" />
+    <ClInclude Include="DXTK\ConstantBuffer.h" />
+    <ClInclude Include="DXTK\dds.h" />
+    <ClInclude Include="DXTK\DDSTextureLoader.h" />
+    <ClInclude Include="DXTK\DemandCreate.h" />
+    <ClInclude Include="DXTK\DirectXHelpers.h" />
+    <ClInclude Include="DXTK\EffectCommon.h" />
+    <ClInclude Include="DXTK\Effects.h" />
+    <ClInclude Include="DXTK\GamePad.h" />
+    <ClInclude Include="DXTK\Keyboard.h" />
+    <ClInclude Include="DXTK\Model.h" />
+    <ClInclude Include="DXTK\Mouse.h" />
+    <ClInclude Include="DXTK\pch.h" />
+    <ClInclude Include="DXTK\PlatformHelpers.h" />
+    <ClInclude Include="DXTK\PrimitiveBatch.h" />
+    <ClInclude Include="DXTK\ScreenGrab.h" />
+    <ClInclude Include="DXTK\SharedResourcePool.h" />
+    <ClInclude Include="DXTK\SimpleMath.h" />
+    <ClInclude Include="DXTK\VertexTypes.h" />
+    <ClInclude Include="DXTK\WICTextureLoader.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Graphics2D.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="PerlinNoise.h" />
+    <ClInclude Include="PlatformFunctions.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="UtilMesh.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Graphics2DPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Graphics2DVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="PixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="TextPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="TextureDisplayPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="TextureDisplayVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="VertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXTK\SimpleMath.inl" />
+    <None Include="DXTK\TeapotData.inc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

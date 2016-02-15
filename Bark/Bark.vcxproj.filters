@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="win32main.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Core\Math.cpp" />
+    <ClCompile Include="Core\String.cpp" />
+    <ClCompile Include="PlatformFunctions.cpp" />
+    <ClCompile Include="OBJLoader.cpp" />
+    <ClCompile Include="Bark.cpp" />
+    <ClCompile Include="PerlinNoise.cpp" />
+    <ClCompile Include="Graphics2D.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="UtilMesh.cpp" />
+    <ClCompile Include="DDSLoader.cpp" />
+    <ClCompile Include="DXTK\BinaryReader.cpp" />
+    <ClCompile Include="DXTK\CommonStates.cpp" />
+    <ClCompile Include="DXTK\DDSTextureLoader.cpp" />
+    <ClCompile Include="DXTK\EffectCommon.cpp" />
+    <ClCompile Include="DXTK\GamePad.cpp" />
+    <ClCompile Include="DXTK\Keyboard.cpp" />
+    <ClCompile Include="DXTK\Model.cpp" />
+    <ClCompile Include="DXTK\ModelLoadSDKMESH.cpp" />
+    <ClCompile Include="DXTK\Mouse.cpp" />
+    <ClCompile Include="DXTK\pch.cpp" />
+    <ClCompile Include="DXTK\PrimitiveBatch.cpp" />
+    <ClCompile Include="DXTK\ScreenGrab.cpp" />
+    <ClCompile Include="DXTK\SimpleMath.cpp" />
+    <ClCompile Include="DXTK\VertexTypes.cpp" />
+    <ClCompile Include="DXTK\WICTextureLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Core\Def.h" />
+    <ClInclude Include="Core\Math.h" />
+    <ClInclude Include="Core\String.h" />
+    <ClInclude Include="PlatformFunctions.h" />
+    <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="Bark.h" />
+    <ClInclude Include="PerlinNoise.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="Graphics2D.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UtilMesh.h" />
+    <ClInclude Include="DDSLoader.h" />
+    <ClInclude Include="DXTK\AlignedNew.h" />
+    <ClInclude Include="DXTK\Audio.h" />
+    <ClInclude Include="DXTK\Bezier.h" />
+    <ClInclude Include="DXTK\BinaryReader.h" />
+    <ClInclude Include="DXTK\CommonStates.h" />
+    <ClInclude Include="DXTK\ConstantBuffer.h" />
+    <ClInclude Include="DXTK\dds.h" />
+    <ClInclude Include="DXTK\DDSTextureLoader.h" />
+    <ClInclude Include="DXTK\DemandCreate.h" />
+    <ClInclude Include="DXTK\DirectXHelpers.h" />
+    <ClInclude Include="DXTK\EffectCommon.h" />
+    <ClInclude Include="DXTK\Effects.h" />
+    <ClInclude Include="DXTK\GamePad.h" />
+    <ClInclude Include="DXTK\Keyboard.h" />
+    <ClInclude Include="DXTK\Model.h" />
+    <ClInclude Include="DXTK\Mouse.h" />
+    <ClInclude Include="DXTK\pch.h" />
+    <ClInclude Include="DXTK\PlatformHelpers.h" />
+    <ClInclude Include="DXTK\PrimitiveBatch.h" />
+    <ClInclude Include="DXTK\ScreenGrab.h" />
+    <ClInclude Include="DXTK\SharedResourcePool.h" />
+    <ClInclude Include="DXTK\SimpleMath.h" />
+    <ClInclude Include="DXTK\VertexTypes.h" />
+    <ClInclude Include="DXTK\WICTextureLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PixelShader.hlsl" />
+    <FxCompile Include="VertexShader.hlsl" />
+    <FxCompile Include="Graphics2DPS.hlsl" />
+    <FxCompile Include="Graphics2DVS.hlsl" />
+    <FxCompile Include="TextureDisplayPS.hlsl" />
+    <FxCompile Include="TextureDisplayVS.hlsl" />
+    <FxCompile Include="TextPS.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXTK\SimpleMath.inl" />
+    <None Include="DXTK\TeapotData.inc" />
+  </ItemGroup>
+</Project>
