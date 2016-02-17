@@ -295,7 +295,7 @@ void Update(Context *context, Input *input, float dt)
 	if (input->Spressed)
 	{
 		texShown = false;
-		//DirectX::SaveDDSTextureToFile(context->renderer.context, context->screenTarget.resource, L"test.dds");
+		DirectX::SaveDDSTextureToFile(context->renderer.context, context->screenTarget.resource, L"bark.dds");
 	}
 
 	for (int i = 0; i < 3; ++i)
