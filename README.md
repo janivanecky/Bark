@@ -37,5 +37,9 @@ Modes are switch using #define CYLINDER in main.cpp. Obviously if defined, Cylin
 
 * W - resets the simulation
 * B - in Flat mode, creates and saves the texture as a binary file in RGBA32 format.
+* S - in Flat mode, saves the texture in the DDS format
 
+##Notes
+
+[DXTK](https://directxtk.codeplex.com/) was used to save the texture to the DDS files.
 
