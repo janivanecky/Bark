@@ -37,6 +37,9 @@ static int LAYERS = 0;
 
 static bool BOUND = false;
 
+#define CYLINDER
+#define THICKNESS 3
+
 void Win32WriteFile(wchar_t *fileName, void *data, unsigned int size)
 {
 	HANDLE fileHandle = 0;
@@ -123,7 +126,7 @@ void Init(Context *context)
 
 	uint32 cellXCount = 100;
 	uint32 cellYCount = 90;
-	uint32 cellZCount = 3;
+	uint32 cellZCount = THICKNESS;
 	uint32 cellCount = cellXCount * cellYCount * cellZCount;
 	FLBark::Init(&context->bark, cellXCount, cellYCount, cellZCount);
 
@@ -185,7 +188,7 @@ void Init(Context *context)
 	UISettings settings;
 	settings.activeFont = 0;
 	settings.colors[BGColor] = Vector4(1,1,1,0.2f);
-	settings.colors[TextColorMain] = Vector4(1,0,0,1);
+	settings.colors[TextColorMain] = Vector4(0.2,0.2,0.2,1);
 	settings.colors[TextColorSecondary] = Vector4(0,0,0,1);
 
 	UI::InitContext(&context->uiContext, &context->g2Dcontext, &settings);

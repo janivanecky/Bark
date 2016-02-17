@@ -374,7 +374,7 @@ void FLBark::Update(Bark *bark, float dt)
 				Vector3 dampForce = -cell->velocity * bark->dampStr;
 				Vector3 totalForce = dampForce + totalTension;
 
-				writeCell->velocity += totalForce * dt;
+				writeCell->velocity += totalForce * dt;	
 				writeCell->position += writeCell->velocity * dt;
 
 				Vector3 normal = cell->originalPosition;
